@@ -1,0 +1,50 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+
+  background-color: #33ABF9 !important;
+  
+  }
+
+  .nav-link {
+    color: white !important;
+  }
+
+  #logo {
+      float: left;
+      font-size: 1.8em;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      font-weight: bold;
+  }
+
+  #home-container {
+    margin-top: 25px;
+  }
+
+  .jumbotron {
+    background-image: asset-url('buy-grapefruit.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: 420px;
+  }
+
+
+
+  html,
+  body {
+    height: 115%;
+  }
+
+
+  #page-content {
+    flex: 1 1 auto;
+    background-color: lightskyblue;
+  }
+
+  #sticky-footer {
+    flex-shrink: none;
+  }
+  
