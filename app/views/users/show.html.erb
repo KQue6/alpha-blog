@@ -2,6 +2,10 @@
 
 <%= gravater_for @user, size: 215 %>
 
+<div class="text-center mt-4">
+  <%= link_to "Re_write Your Book", edit_user_path(@user), class: "btn btn-outline-primary" %>
+</div>
+
 <h3 class="text-center mt-4">Articles</3>
 
 <%= render 'articles/article' %>

@@ -4,6 +4,10 @@
       @user = User.find(params[:id])
       @articles = @user.articles
     end
+      
+      def index 
+        @users = User.all
+      end
 
 
     def new
@@ -18,7 +22,7 @@
       @user = User.find(params[:id])
       if @user.update(user_params)
         flash[:notice] = "You Have All The Money In The World"
-        redirect_to articles_path
+        redirect_to @user
       else
         render 'edit'
       end
@@ -41,5 +45,4 @@
     def user_params
       params.require(:user).permit(:username, :email, :password)
     end
-
-  # end 
+  # end
