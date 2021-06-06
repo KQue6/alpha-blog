@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
   end
 
 
+    def require_user
+      if !logged_in?
+          flash[:alert] = "Access Granted to Q-writers Log in Or Sign Up."
+          redirect_to login_path
+      end
+    end
+
 end
