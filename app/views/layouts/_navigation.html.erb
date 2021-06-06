@@ -30,10 +30,9 @@
             Profile [<%= current_user.username %>]
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      
-              <%= link_to "Read Your Pages", user_path(current_user), class: "dropdown-item" %>
-            
+            <%= link_to "Read Your Pages", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Re_write Your Book", edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Erase A Story", user_path(current_user), class: "dropdown-item text-primary", method: :delete, data: {confirm: "Burn A Book Will Delete A Book Forever"} %>
           </div>
         </li>
         <li class="nav-item">
