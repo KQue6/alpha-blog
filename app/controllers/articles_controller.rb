@@ -59,7 +59,7 @@ end
     end
 
     def require_same_user
-      if current_user != @article.user
+      if current_user != @article.user && !current_user.admin?
         flash[:alert] = "Q-Writers Can Only Edit Personal Books Or Pages"
         redirect_to @article
       end
