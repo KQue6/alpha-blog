@@ -23,9 +23,10 @@
             <% if user == current_user %>
               <%= link_to "Edit Writer Book", edit_user_path(user), class: "btn btn-outline-success" %>
            <% end %>
-           <% if current_user.admin?
+           <% if current_user.admin? %>
               <%= link_to "Delete User", user_path(user), class: "btn btn-outline-danger", method: :delete,
               data: {confirm: "You Will Erase A Book and  the Writer's pages"} %>
+            <% end %>
           <% end %>
         </div>
     <div class="card-footer text-muted">
